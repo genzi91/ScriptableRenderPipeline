@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- It is now possible to specify the maximum number of visible lights. If set, lights will be sorted using distance to the camera
+
 ## [7.2.0] - 2020-03-02
 
 ### Added
