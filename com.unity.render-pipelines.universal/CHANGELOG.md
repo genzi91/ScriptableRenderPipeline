@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Changed
-- The check for maximum visible lights now checks if the platform is mobile or not.
+- The number of maximum visible lights is now determined by whether the platform is mobile or not.
 
 ## [7.2.0] - 2020-03-02
 
