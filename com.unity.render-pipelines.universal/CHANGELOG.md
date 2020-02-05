@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Particle shaders now receive shadows
 - The Scene view now mirrors the Volume Layer Mask set on the Main Camera.
 - Drawing order of SRPDefaultUnlit is now the same as the Built-in Render Pipline.
+- The number of maximum visible lights is now determined by whether the platform is mobile or not.
 
 ### Fixed
 - Fixed an issue where linear to sRGB conversion occurred twice on certain Android devices.
