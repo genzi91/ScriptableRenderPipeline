@@ -640,9 +640,6 @@ namespace UnityEngine.Rendering.Universal
             bool isOffscreenCamera = cameraData.targetTexture != null && !cameraData.isSceneViewCamera;
             renderingData.resolveFinalTarget = requiresBlitToBackbuffer;
             renderingData.postProcessingEnabled = anyPostProcessingEnabled;
-#pragma warning disable // avoid warning because killAlphaInFinalBlit has attribute Obsolete
-            renderingData.killAlphaInFinalBlit = false;
-#pragma warning restore
         }
 
         static void InitializeShadowData(UniversalRenderPipelineAsset settings, NativeArray<VisibleLight> visibleLights, bool mainLightCastShadows, bool additionalLightsCastShadows, out ShadowData shadowData)
@@ -655,11 +652,7 @@ namespace UnityEngine.Rendering.Universal
                 UniversalAdditionalLightData data = null;
                 if (light != null)
                 {
-#if UNITY_2019_3_OR_NEWER
                     light.gameObject.TryGetComponent(out data);
-#else
-                    data = light.gameObject.GetComponent<UniversalAdditionalLightData>();
-#endif
                 }
 
                 if (data && !data.usePipelineSettings)
