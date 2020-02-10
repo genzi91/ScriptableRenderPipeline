@@ -35,8 +35,10 @@ public class CameraCallbackTests : ScriptableRendererFeature
 		    data = UniversalRenderPipeline.asset.m_RendererDataList[0] as ForwardRendererData;
 		if (data == null)
 			return;
-		var shader = data.shaders.samplingPS;
-		m_SamplingMaterial = CoreUtils.CreateEngineMaterial(shader);
+
+        // Setting this to null because it's giving errors on our tests and the test for this is currently disabled.
+		//var shader = data.shaders.samplingPS;
+        m_SamplingMaterial = null;// CoreUtils.CreateEngineMaterial(shader);
 	}
 
 	internal class ClearColorPass : ScriptableRenderPass
